@@ -19,6 +19,16 @@ public class NextMain {
         var plane = new Comedy("Aiplane");
         plane.watchComedy();
 
+        Object unknownObject = Movie.getMovie("S", "Interstellar");
+        if (unknownObject.getClass().getSimpleName() == "Comedy") {
+            Comedy c = (Comedy) unknownObject;
+            c.watchComedy();
+        } else if(unknownObject instanceof Adventure){ //instanceof testa o tipo de um objeto ou instancia, retorna true se for Adventure
+            ((Adventure) unknownObject).watchAdventure();
+        } else if(unknownObject instanceof SciFi syfy){
+            syfy.watchSciFi();
+        }
+
     }
 
 }
